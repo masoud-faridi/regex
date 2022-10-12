@@ -34,3 +34,10 @@ stringr::str_detect(string =aaa ,"province")
 (x=aaa,"province")
 
 aaa[stringr::str_detect(string =aaa ,"province")]
+
+
+str_detect(
+  c("data_pasgah","data_rahvar","data_province"),
+  pattern = "pasgah|rahvar"
+  
+  )
