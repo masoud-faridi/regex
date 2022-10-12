@@ -1,10 +1,16 @@
 str1<-"start end"
 str2<-"start match1 end days  startmatch2end"
 gsub(pattern="match",replacement = "",x=str2)
+gsub(pattern="match",replacement = "\\1",x=str2)
 gsub(pattern="^(start)",replacement = "",x=str1)
 gsub(pattern=".*(art).*",replacement = "\\1",x=str1)
+gsub(pattern=".*st(.*)t.*",replacement = "\\1",x=str1)
+gsub(pattern=".*(art).*",replacement = "",x=str1)
 gsub(pattern=".*(art).*",replacement = "\\1",x=str1)
+gsub(pattern=".*(art).*(en).*",replacement = "\\1",x=str1)
 gsub(pattern=".*(art).*(en).*",replacement = "\\2",x=str1)
+gsub(pattern=".*(art).*(en).*",replacement = "\\1\\2",x=str1)
+gsub(pattern=".*(art).*(en).*",replacement = "\\2 \\1",x=str1)
 gsub(pattern=".*(art).*(en).*(mat.*)end",replacement = "\\3",x=str2)
 gsub(pattern=".*(art)",replacement = "\\1",x=str1)
 gsub(pattern="(art).*",replacement = "\\1",x=str1)
